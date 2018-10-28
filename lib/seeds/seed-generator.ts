@@ -1,16 +1,38 @@
-export class SeedGenerator {
+import { Container } from 'inversify';
+import { ISeedGenerator } from './seed-generator.interface';
 
-  greeting: string;
+export class SeedGenerator implements ISeedGenerator {
 
-  public constructor(message: string) {
-    this.greeting = message;
+  bootstrap(container: Container): Promise<void> {
+    throw new Error('Method not implemented.');
   }
 
-  public foo(): string {
-    return this.greeting;
+  initialize(): Promise<void> {
+    throw new Error('Method not implemented.');
   }
 
-  public foo3(): string {
-    return 'Hello!';
+  prompt(): Promise<void> {
+    throw new Error('Method not implemented.');
   }
+
+  preGeneration(): Promise<void> {
+    throw new Error('Method not implemented.');
+  }
+
+  generate(): Promise<void> {
+    throw new Error('Method not implemented.');
+  }
+
+  conflicts(): Promise<void> {
+    throw new Error('Method not implemented.');
+  }
+
+  postGeneration(): Promise<void> {
+    throw new Error('Method not implemented.');
+  }
+
+  cleanup(): Promise<void> {
+    throw new Error('Method not implemented.');
+  }
+
 }

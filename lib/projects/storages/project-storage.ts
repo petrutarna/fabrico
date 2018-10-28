@@ -1,13 +1,5 @@
-import { Metadata } from "../model";
-
-export interface IProjectStorage {
-
-  /**
-   * Get fabrico metadata.
-   */
-  getMetadata(): Promise<Metadata>;
-
-}
+import { Metadata } from '../model';
+import { IProjectStorage } from './project-storage.interface';
 
 export class ProjectStorage implements IProjectStorage {
 
