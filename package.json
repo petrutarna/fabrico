@@ -26,6 +26,7 @@
     "clean.artifacts": "node rimraf.js dist logs",
     "clean.node_modules": "node rimraf.js node_modules",
     "setup": "npm install",
+    "setup.box": "echo empty",
     "build": "tsc && cpr package.json dist/package.json -o",
     "build.test": "npm run clean.artifacts && tsc -p tsconfig.debug.json --outDir dist",
     "test": "nyc -e .ts -x bin -x lib/**/*.spec.ts mocha -r ts-node/register lib/**/*.spec.ts",
@@ -34,7 +35,9 @@
     "start": "node ./dist/bin/index.js",
     "link": "cd dist && npm link",
     "unlink": "cd dist && npm unlink",
-    "lbuild": "npm build && npm link"
+    "lbuild": "npm build && npm link",
+    "wkb": "cd ../fabrico-workspace && fabrico-code-workspace.cmd BUILD",
+    "wktest": "cd ../fabrico-workspace && fabrico-code-workspace.cmd TEST"
   },
   "devDependencies": {
     "@types/chai": "^4.1.6",
