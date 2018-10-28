@@ -1,6 +1,6 @@
 import { IFileSystem } from './file-system';
 
-export class PysichalFileSystem implements IFileSystem {
+export class PhysicalFileSystem implements IFileSystem {
 
   pathJoin(...path: string[]): Promise<string> {
     throw new Error('Method not implemented.');
