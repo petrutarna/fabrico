@@ -1,6 +1,6 @@
 import { Target } from './target';
 
-export class FabricoMetadata {
+export class Metadata {
 
   version: string;
   name: string;
