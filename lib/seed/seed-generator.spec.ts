@@ -3,7 +3,7 @@ import * as mocha from 'mocha';
 
 const expect = chai.expect;
 
-describe('Generator', () => {
+describe('SeedGenerator', () => {
 
   beforeEach(() => {
   });

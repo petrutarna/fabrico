@@ -1,4 +1,4 @@
-export class Generator {
+export class SeedGenerator {
 
   greeting: string;
 
