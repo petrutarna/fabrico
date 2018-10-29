@@ -1,5 +1,5 @@
 // modules
-import { ISeedGenerator } from "./seed-generator";
+import { ISeedGenerator } from './seed-generator.interface';
 
 export interface ISeedLoader {
 
