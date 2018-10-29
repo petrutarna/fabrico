@@ -41,4 +41,5 @@ export interface ISeedGenerator {
    * Cleanup call. Perform any reuquired cleanup operation.
    */
   cleanup(): Promise<void>;
+
 }
