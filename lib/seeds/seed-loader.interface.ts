@@ -1,3 +1,5 @@
+import { ISeedGenerator } from "./seed-generator";
+
 export interface ISeedLoader {
 
   /**
@@ -10,6 +12,6 @@ export interface ISeedLoader {
    * Create a seed generator.
    * @param seedName name of the seed containing the seed generator.
    */
-  createSeedGenerator(seedName: string);
+  createSeedGenerator(seedName: string): Promise<ISeedGenerator>;
 
 }
