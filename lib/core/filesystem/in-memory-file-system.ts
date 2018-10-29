@@ -1,4 +1,4 @@
-// libs
+// modules
 import { IInMemoryFileSystem } from './in-memory-file-system.interface';
 
 export class InMemoryFileSystem implements IInMemoryFileSystem {

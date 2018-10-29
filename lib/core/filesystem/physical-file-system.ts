@@ -1,4 +1,4 @@
-// libs
+// modules
 import { IPhysicalFileSystem } from './physical-file-system.interface';
 
 export class PhysicalFileSystem implements IPhysicalFileSystem {
