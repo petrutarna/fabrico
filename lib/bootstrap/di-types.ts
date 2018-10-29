@@ -3,8 +3,10 @@
  */
 const DI_TYPES = {
   System: Symbol('System'),
-  SeedLoader: Symbol('SeedLoader'),
   Logger: Symbol('Logger'),
+  InMemoryFileSystem: Symbol('InMemoryFileSystem'),
+  PhysicalFileSystem: Symbol('PhysicalFileSystem'),
+  SeedLoader: Symbol('SeedLoader'),
   Project: Symbol('Project')
 };
 

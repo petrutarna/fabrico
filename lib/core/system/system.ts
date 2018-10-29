@@ -1,18 +1,24 @@
 // libs
 import { injectable } from 'inversify';
-import os = require('os');
+
+// modules
+import { ISystem } from '.';
 
 @injectable()
-export class System {
+export class System implements ISystem {
 
   /**
    * Create a new instance of system.
    */
-  constructor(public version: string) {
+  constructor() {
+  }
+
+  get version(): string {
+    throw new Error('Method not implemented.');
   }
 
   get username(): string {
-    return os.userInfo().username;
+    throw new Error('Method not implemented.');
   }
 
 }

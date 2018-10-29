@@ -1,21 +1,9 @@
-// modules
-import { IFileSystem } from './file-system';
+// libs
+import { IInMemoryFileSystem } from './in-memory-file-system.interface';
 
-export class InMemoryFileSystem implements IFileSystem {
+export class InMemoryFileSystem implements IInMemoryFileSystem {
 
-  pathJoin(...path: string[]): Promise<string> {
-    throw new Error('Method not implemented.');
-  }
-
-  pathExists(path: string): Promise<void> {
-    throw new Error('Method not implemented.');
-  }
-
-  remove(path: string): Promise<void> {
-    throw new Error('Method not implemented.');
-  }
-
-  createFile(path: string, data: any): Promise<void> {
+  save(): Promise<void> {
     throw new Error('Method not implemented.');
   }
 
