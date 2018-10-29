@@ -1,4 +1,7 @@
+// libs
 import { Container } from 'inversify';
+
+// modules
 import { ISeedGenerator } from './seed-generator.interface';
 
 export class SeedGenerator implements ISeedGenerator {
@@ -34,5 +37,5 @@ export class SeedGenerator implements ISeedGenerator {
   cleanup(): Promise<void> {
     throw new Error('Method not implemented.');
   }
-  
+
 }

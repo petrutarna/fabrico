@@ -1,13 +1,15 @@
+// libs
 import { injectable } from 'inversify';
 import * as fs from 'fs-extra';
-
-import { Metadata } from './model';
-
 const yamlJs = require('js-yaml');
 const path = require('path');
 
+// modules
+import { Metadata } from './model';
+import { IProject } from './project.interface';
+
 @injectable()
-export class Project {
+export class Project implements IProject {
 
   async saveMetaData(force: boolean, workingPath: string, metaData: Metadata): Promise<void> {
     const yaml = yamlJs.safeDump(metaData);

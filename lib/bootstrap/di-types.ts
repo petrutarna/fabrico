@@ -3,6 +3,7 @@
  */
 const DI_TYPES = {
   System: Symbol('System'),
+  SeedLoader: Symbol('SeedLoader'),
   Logger: Symbol('Logger'),
   Project: Symbol('Project')
 };
