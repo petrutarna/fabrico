@@ -3,7 +3,8 @@
  */
 const DI_TYPES = {
   System: Symbol('System'),
-  Logger: Symbol('Logger')
+  Logger: Symbol('Logger'),
+  Project: Symbol('Project')
 };
 
 export { DI_TYPES };
