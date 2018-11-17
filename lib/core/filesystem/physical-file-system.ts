@@ -7,7 +7,7 @@ export class PhysicalFileSystem implements IPhysicalFileSystem {
     throw new Error('Method not implemented.');
   }
 
-  pathExists(path: string): Promise<void> {
+  pathExists(path: string): Promise<boolean> {
     throw new Error('Method not implemented.');
   }
 
@@ -15,7 +15,11 @@ export class PhysicalFileSystem implements IPhysicalFileSystem {
     throw new Error('Method not implemented.');
   }
 
-  createFile(path: string, data: any): Promise<void> {
+  createFile(path: string, data: any, force: boolean): Promise<void> {
+    throw new Error('Method not implemented.');
+  }
+
+  createYamlFile(path: string, data: any, force: boolean): Promise<void> {
     throw new Error('Method not implemented.');
   }
 

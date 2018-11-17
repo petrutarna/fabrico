@@ -3,6 +3,6 @@ import { Metadata } from './model';
 
 export interface IProject {
 
-  saveMetaData(force: boolean, workingPath: string, metaData: Metadata): Promise<void>;
+  saveMetaData(workingPath: string, metaData: Metadata, force: boolean): Promise<void>;
 
 }

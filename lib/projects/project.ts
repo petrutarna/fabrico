@@ -8,7 +8,7 @@ import { IProject } from './project.interface';
 @injectable()
 export class Project implements IProject {
 
-  async saveMetaData(force: boolean, workingPath: string, metaData: Metadata): Promise<void> {
+  async saveMetaData(workingPath: string, metaData: Metadata, force: boolean): Promise<void> {
     throw new Error('Method not implemented.');
   }
 
