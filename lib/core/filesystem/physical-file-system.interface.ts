@@ -10,5 +10,4 @@ export interface IPhysicalFileSystem {
   remove(path: string): Promise<void>;
   createFile(path: string, data: any, force: boolean): Promise<void>;
   createYamlFile(path: string, data: any, force: boolean): Promise<void>;
-  save(): Promise<void>;
 }
