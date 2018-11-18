@@ -19,11 +19,11 @@ describe('Runtime should', () => {
   let runtime: Runtime;
 
   beforeEach(() => {
-    runtime = new Runtime();
+    runtime = new Runtime(null);
   });
 
   it('have a container instance', async () => {
-    expect(runtime.container).not.null;
+    expect(runtime.container).null;
   });
 
 });

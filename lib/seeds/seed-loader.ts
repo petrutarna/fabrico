@@ -6,13 +6,25 @@
 
 // libs
 import 'reflect-metadata';
-import { injectable } from 'inversify';
+import { inject, injectable } from 'inversify';
 
 // modules
+import { DI_TYPES } from '../bootstrap';
 import { ISeedLoader, ISeedGenerator, ISeedDescriptor } from './index';
+import { IRuntime, container } from '../core';
 
 @injectable()
 export class SeedLoader implements ISeedLoader {
+
+  /**
+   * Create a new instance of SeedLoader.
+   */
+  constructor(@inject(DI_TYPES.Runtime) private runtime: IRuntime) {
+  }
+
+  protected async boostrap(seedDescriptor: ISeedDescriptor) {
+    seedDescriptor.bootstrapper.onInit(this.runtime.container);
+  }
 
   public async loadSeed(seedName: string): Promise<ISeedDescriptor> {
     throw new Error('Method not implemented.');
