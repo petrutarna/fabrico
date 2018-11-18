@@ -14,8 +14,12 @@ import { IProject } from './project.interface';
 @injectable()
 export class Project implements IProject {
 
-  async saveMetaData(workingPath: string, metaData: Metadata, force: boolean): Promise<void> {
+  async onSaveMetaData(workingPath: string, metaData: Metadata, force: boolean): Promise<void> {
     throw new Error('Method not implemented.');
+  }
+
+  async saveMetaData(workingPath: string, metaData: Metadata, force: boolean): Promise<void> {
+    return this.onSaveMetaData(workingPath, metaData, force);
   }
 
 }
