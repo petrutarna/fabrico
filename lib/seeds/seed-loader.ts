@@ -32,7 +32,7 @@ export class SeedLoader implements ISeedLoader {
 
   public async createSeedGenerator(seedName: string): Promise<ISeedGenerator> {
     const seedDescriptor = await this.loadSeed(seedName);
-    return seedDescriptor.customSeedGenerator();
+    return seedDescriptor.customSeedGenerator(this.runtime.container);
   }
 
 }
