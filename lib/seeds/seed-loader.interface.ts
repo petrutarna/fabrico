@@ -5,6 +5,7 @@
  */
 
 // modules
+import { ISeedDescriptor } from './seed-descriptor.interface';
 import { ISeedGenerator } from './seed-generator.interface';
 
 export interface ISeedLoader {
@@ -13,7 +14,7 @@ export interface ISeedLoader {
    * Load a seed by name.
    * @param seedName seed name.
    */
-  loadSeed(seedName: string): Promise<any>;
+  loadSeed(seedName: string): Promise<ISeedDescriptor>;
 
   /**
    * Create a seed generator.

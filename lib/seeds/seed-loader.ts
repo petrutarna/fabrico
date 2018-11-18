@@ -5,22 +5,22 @@
  */
 
 // libs
+import 'reflect-metadata';
 import { injectable } from 'inversify';
 
 // modules
-import { ISeedLoader, ISeedGenerator } from './index';
+import { ISeedLoader, ISeedGenerator, ISeedDescriptor } from './index';
 
 @injectable()
 export class SeedLoader implements ISeedLoader {
 
-  public async loadSeed(seedName: string): Promise<any> {
+  public async loadSeed(seedName: string): Promise<ISeedDescriptor> {
     throw new Error('Method not implemented.');
   }
 
   public async createSeedGenerator(seedName: string): Promise<ISeedGenerator> {
-    const seed = await this.loadSeed(seedName);
-    const gen = new seed.CustomSeedGenerator() as ISeedGenerator;
-    return gen;
+    const seedDescriptor = await this.loadSeed(seedName);
+    return seedDescriptor.customSeedGenerator();
   }
 
 }
