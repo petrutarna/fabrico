@@ -8,6 +8,7 @@
  * Lists all the symbols used to represent types in our DI core configuration.
  */
 const DI_TYPES = {
+  Runtime: Symbol('Runtime'),
   System: Symbol('System'),
   Logger: Symbol('Logger'),
   InMemoryFileSystem: Symbol('InMemoryFileSystem'),

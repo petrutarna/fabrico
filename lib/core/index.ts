@@ -5,6 +5,7 @@
  */
 
 export * from './bootstrap';
+export * from './runtime';
 export * from './system';
 export * from './logging';
 export * from './filesystem';
