@@ -22,12 +22,14 @@ export class SeedLoader implements ISeedLoader {
   constructor(@inject(DI_TYPES.Runtime) private runtime: IRuntime) {
   }
 
-  protected async boostrap(seedDescriptor: ISeedDescriptor) {
-    seedDescriptor.bootstrapper.onInit(this.runtime.container);
+  protected async onLoadSeed(seedName: string): Promise<ISeedDescriptor> {
+    throw new Error('Method not implemented.');
   }
 
   public async loadSeed(seedName: string): Promise<ISeedDescriptor> {
-    throw new Error('Method not implemented.');
+    const seedDescriptor = await this.onLoadSeed(seedName);
+    seedDescriptor.bootstrapper.onInit(this.runtime.container);
+    return seedDescriptor;
   }
 
   public async createSeedGenerator(seedName: string): Promise<ISeedGenerator> {
