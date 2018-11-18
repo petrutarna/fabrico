@@ -1,6 +1,10 @@
+// libs
+import { injectable } from 'inversify';
+
 // modules
 import { IPhysicalFileSystem } from './physical-file-system.interface';
 
+@injectable()
 export class PhysicalFileSystem implements IPhysicalFileSystem {
 
   pathJoin(...path: string[]): Promise<string> {
