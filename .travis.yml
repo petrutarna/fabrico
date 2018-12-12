@@ -4,12 +4,3 @@ node_js:
   - "10.14.2"
 
 cache: npm
-
-# How many commits to clone from repository, default 50
-git:
-  depth: 10
-
-# Which branches to build, can be used regEx(/^deploy-.*$/) safalist(only) and blocklist(except)
-branches:
-  only:
-  - master
