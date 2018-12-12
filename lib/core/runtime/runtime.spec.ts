@@ -11,6 +11,7 @@ import * as TypeMoq from 'typemoq';
 
 // modules
 import { Runtime } from './runtime';
+import { Container } from 'inversify';
 
 const expect = chai.expect;
 
@@ -24,6 +25,20 @@ describe('Runtime should', () => {
 
   it('have a container instance', async () => {
     expect(runtime.container).null;
+  });
+
+});
+
+describe('Runtime should', () => {
+
+  let runtime: Runtime;
+
+  beforeEach(() => {
+    runtime = new Runtime(new Container());
+  });
+
+  it('have a id not 0', async () => {
+    expect(runtime.container.id).to.not.equal(0);
   });
 
 });
