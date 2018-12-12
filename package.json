@@ -29,7 +29,7 @@
     "setup.box": "echo empty",
     "build": "tsc && cpr package.json dist/package.json -o",
     "build.test": "npm run clean.artifacts && tsc -p tsconfig.debug.json --outDir dist",
-    "test": "nyc -e .ts -x bin -x lib/**/*.spec.ts mocha --recursive -r ts-node/register lib/**/*.spec.ts",
+    "test": "nyc -e .ts -x bin -x lib/**/*.spec.ts mocha --recursive -r ts-node/register \"lib/**/*.spec.ts\"",
     "integration-test": "echo integration-test",
     "deploy": "echo deploy",
     "start": "node ./dist/bin/index.js",
