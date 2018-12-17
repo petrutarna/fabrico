@@ -27,6 +27,9 @@ notifications:
       - petrutarna@gmail.com
       - COMMITTER_EMAIL
       - 9cfe50a3.codearchitects.com@emea.teams.ms
+    template:
+      - "%{repository_slug}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}"
+      - "Change view : %{compare_url}"
+      - "Build details : %{build_url}"
     on_success: never
     on_failure: always
-  
