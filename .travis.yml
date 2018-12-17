@@ -18,3 +18,14 @@ jobs:
       script: npm run build.test
     - stage: deploy
       script: npm run deploy
+
+notifications:
+  email:
+    recipients:
+      - petrutarna@gmail.com
+    on_success: never
+    on_failure: always
+
+  webhooks: https://outlook.office.com/webhook/43af896b-d5ff-483c-91c3-ee00fc600d58@1a59e398-83d8-4052-aec9-74a7d6461c5e/TravisCI/a66fa77fd90346d696dc39e6a17d9572/12ae7f10-bd96-490a-8464-57630decc5cc
+    on_success: always 
+    on_failure: always 
