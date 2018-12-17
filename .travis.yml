@@ -10,6 +10,8 @@ before_install:
 
 jobs:
   include:
+    - stage: tests
+      script: npm run test
     - stage: integration tests
       script: npm run integration-test
     - stage: build
@@ -23,6 +25,7 @@ notifications:
   email:
     recipients:
       - petrutarna@gmail.com
+      - COMMITTER_EMAIL
     on_success: never
     on_failure: always
 
