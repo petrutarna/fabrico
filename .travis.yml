@@ -5,6 +5,9 @@ node_js:
 
 cache: npm
 
+before_install:
+  - export COMMITTER_EMAIL="$(git log -1 $TRAVIS_COMMIT --pretty="%cE")"
+
 jobs:
   include:
     - stage: integration tests
