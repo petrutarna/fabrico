@@ -24,5 +24,6 @@ jobs:
 notifications:
   email:
     recipients:
+      - COMMITTER_EMAIL
       - 9cfe50a3.codearchitects.com@emea.teams.m
   
