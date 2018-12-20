@@ -10,7 +10,9 @@ before_install:
 
 jobs:
   include:
-    - stage: integration tests
+    - stage: Unit tests
+      script: npm run test
+      - stage: integration tests
       script: npm run integration-test
     - stage: build
       script: npm run build
