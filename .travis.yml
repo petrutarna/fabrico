@@ -5,9 +5,6 @@ node_js:
 
 cache: npm
 
-before_install:
-  - export COMMITTER_EMAIL="$(git log -1 $TRAVIS_COMMIT --pretty="%cE")"
-
 jobs:
   include:
     - stage: Unit tests
@@ -24,6 +21,5 @@ jobs:
 notifications:
   email:
     recipients:
-      - COMMITTER_EMAIL
-      - 9cfe50a3.codearchitects.com@emea.teams.m
+      - petrutarna@gmail.com
   
