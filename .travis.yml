@@ -12,7 +12,7 @@ jobs:
   include:
     - stage: Unit tests
       script: npm run test
-      - stage: integration tests
+    - stage: integration tests
       script: npm run integration-test
     - stage: build
       script: npm run build
@@ -24,6 +24,5 @@ jobs:
 notifications:
   email:
     recipients:
-      - COMMITTER_EMAIL
       - 9cfe50a3.codearchitects.com@emea.teams.m
   
