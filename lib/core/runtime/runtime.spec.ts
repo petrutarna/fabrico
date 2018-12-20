@@ -29,16 +29,16 @@ describe('Runtime should', () => {
 
 });
 
-// describe('Runtime should', () => {
+describe('Runtime should', () => {
 
-//   let runtime: Runtime;
+  let runtime: Runtime;
 
-//   beforeEach(() => {
-//     runtime = new Runtime(new Container());
-//   });
+  beforeEach(() => {
+    runtime = new Runtime(new Container());
+  });
 
-//   it('have id not 0', async () => {
-//     expect(runtime.container.id).to.not.equal(0);
-//   });
+  it('have id not 0', async () => {
+    expect(runtime.container.id).to.not.equal(0);
+  });
 
-// });
+});

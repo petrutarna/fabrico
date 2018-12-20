@@ -23,6 +23,5 @@ notifications:
   email:
     recipients:
       - COMMITTER_EMAIL
-      - petrutarna@gmail.com
       - 9cfe50a3.codearchitects.com@emea.teams.m
   
